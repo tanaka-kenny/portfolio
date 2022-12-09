@@ -1,0 +1,63 @@
+@import '../../../assets/styles/variables.scss';
+
+.intro {
+    margin-bottom: 4rem;
+}
+
+form {
+    padding-bottom: 10px;
+}
+
+.details {
+    display: flex;
+    width: 100%;
+
+    .input-item {
+        width: 100%;
+    }
+
+    .input-item:not(:first-child) {
+        margin-left: 2rem;
+    }
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    color: $gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    .required {
+        color: red;
+    }
+}
+
+.details-input {
+    width: inherit;
+}
+
+.subject-input, textarea {
+    width: 100%;
+}
+
+input {
+    height: 50px;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 2rem;
+    font-size: 18px;
+    color: hsl(212, 24%, 26%);
+}
+
+textarea {
+    border: none;
+    border-radius: 7px;
+    font-size: 18px;
+    color: hsl(212, 24%, 26%);
+}
+
+.btn {
+    margin-top: 2rem;
+}

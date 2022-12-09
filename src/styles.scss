@@ -1,21 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;500;600;800&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: hsl(223, 19%, 93%);
-}
-
-body {
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-
 /** Color variables */
 // PRIMARY
 $gray: rgb(108, 117, 125);
@@ -31,3 +16,48 @@ $grayish-blue: hsl(211, 10%, 45%);
 $light-gray: hsl(223, 19%, 93%);
 $very-light-gray: hsl(228, 33%, 97%);
 $white: hsl(0, 0%, 100%);
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(223, 19%, 93%);
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+// container 
+section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3.5rem;
+  max-width: 991px;
+}
+
+h4 {
+  font-size: 3rem;
+  color: $dark-blue;
+}
+
+p{
+  font-size: 18px;
+  color: $gray;
+  font-weight: 600;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: $moderate-blue;
+  color: $white;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: 'Nunito Sans';
+}

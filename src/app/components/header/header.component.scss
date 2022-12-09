@@ -1,13 +1,14 @@
 @import '../../../styles.scss';
 
-section {
-    padding-left: 20rem;
-    padding-right: 20rem;
+.header {
+    max-width: 991px;
     padding-top: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .name  {
-    font-size: 30px;
+    font-size: 35px;
     text-transform: uppercase;
     font-weight: bold;
     line-height: 2.5rem;
