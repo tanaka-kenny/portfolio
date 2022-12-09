@@ -1,4 +1,4 @@
-@import '../../../assets/styles/variables.scss';
+@import '../../../styles.scss';
 
 section {
     padding-left: 20rem;
@@ -11,6 +11,7 @@ section {
     text-transform: uppercase;
     font-weight: bold;
     line-height: 2.5rem;
+    color: $moderate-blue;
 }
 
 nav {
@@ -28,45 +29,3 @@ nav {
         margin-left: 1.5rem;
     }
 }
-
-.about {
-    margin-top: 5rem;
-
-    h4 {
-        font-size: 25px;
-    }
-
-    p{
-        font-size: 18px;
-        color: $gray;
-    }
-
-    .connect {
-        font-weight: bold;
-    }
-
-    .icons {
-        display: flex;
-        justify-content: space-around;
-
-        a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            svg {
-                margin-bottom: 0.5rem;
-                width: 30px;
-                height: 30px;
-                display: block;
-            }
-
-            em {
-                font-size: 18px;
-            }
-        }
-
-        
-    }
-}
-
