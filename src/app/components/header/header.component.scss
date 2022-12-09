@@ -18,7 +18,7 @@
 nav {
     margin-top: 2rem;
 
-    a {
+    .link-item {
         text-decoration: none;
         color: $gray;
         font-size: 18px;
@@ -26,7 +26,22 @@ nav {
         font-weight: bold;
     }
     
-    a:not(:first-child) {
+    .link-item:not(:first-child) {
         margin-left: 1.5rem;
+    }
+
+    .link-item:hover {
+        color: $moderate-blue;
+    }
+
+    .active {
+        background-color: $moderate-blue;
+        color: $white;
+        padding: 4px;
+        border-radius: 4px;
+    }
+
+    .active:hover {
+        color: $white;
     }
 }
