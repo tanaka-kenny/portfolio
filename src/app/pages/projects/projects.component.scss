@@ -1,0 +1,77 @@
+@import '../../../styles.scss';
+.projects {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    margin-bottom: 4rem;
+}
+
+h4 {
+    margin-bottom: 2rem;
+}
+
+span {
+    border-radius: 7px;
+    background: hsl(223, 19%, 93%);
+    padding: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    color: $moderate-blue;
+  }
+
+  span:not(:first-child) {
+    margin-left: 10px;
+  }
+
+.project {
+    width: 100%;
+    display: flex;
+    background-color: $white;
+    border-radius: 7px;
+
+    .image {
+        width: 100%;
+        margin-right: 2rem;
+
+        img {
+            width: inherit;
+            display: block;
+        }
+    }
+
+    .description {
+        margin-left: 2rem;
+        
+
+        a {
+            display: inline-block;
+            margin-top: 2rem;
+            font-size: 2.5rem;
+            color: $dark-blue;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        a:hover {
+            color: $moderate-blue;
+        }
+
+        p {
+            margin-bottom: 2rem;
+          }
+
+        button {
+            width: 120px;
+            margin-top: 2rem;
+        }
+
+        button:last-child {
+            margin-left: 10px;
+        }
+
+    }
+    
+}

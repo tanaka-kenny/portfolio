@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  tags = [
+    'Frontend',
+    'Angular',
+    'Personal',
+    'Professional'
+  ]
+
 }
