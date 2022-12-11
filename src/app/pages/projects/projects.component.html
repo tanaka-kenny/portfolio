@@ -1,26 +1,22 @@
 <section>
     <h4>Professional and side projects.</h4>
-    <p>You may use the filters to catergorize the projects that I have worked on.</p>
+    <p class="intro">Hover or tap on a card to see the project details.</p>
 </section>
-<div class="projects">
-    <div class="project" *ngFor="let project of projects">
-        <div class="image" *ngIf="project.imageSrc">
-            <img [src]="'../../../assets/images/'+project.imageSrc+'.png'" alt="">
+
+<div class="wrapper">
+    <div class="card" *ngFor="let project of projects">
+        <img *ngIf="project.imageSrc"
+            [src]="'../../../assets/images/'+project.imageSrc+'.png'" 
+            alt="">
+      <div class="info">
+        <h4>{{ project.name }}</h4>
+        <p> {{ project.description }}</p>
+        <p>Platform(s): <span *ngFor="let platform of project.platforms">{{platform}} </span></p>
+        <div class="tags">
+            <span *ngFor="let tag of project.tags"> {{ tag }} </span>
         </div>
-        <div class="description">
-            <a>{{ project.name }}</a>
-            <p>{{ project.description }}</p>
-            <p>Platform(s): <span *ngFor="let platform of project.platforms">{{platform}} </span></p>
-            <div class="tags">
-                <span *ngFor="let tag of project.tags"> {{ tag }} </span>
-            </div>
-            <button>
-                Live Url
-            </button>
-            <button *ngIf="project.isPublic">
-                Source code
-            </button>
-        </div>
-        
+        <a [routerLink]="" class="btn">Project Details</a>
+        <a [href]="" class="btn" style="margin-left: 10px;">Source code</a>
+      </div>
     </div>
-</div>
+  </div>

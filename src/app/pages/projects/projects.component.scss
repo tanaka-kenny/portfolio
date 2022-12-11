@@ -1,21 +1,8 @@
 @import '../../../styles.scss';
-.projects {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-p {
-    margin-bottom: 4rem;
-}
-
-h4 {
-    margin-bottom: 2rem;
-}
 
 span {
     border-radius: 7px;
-    background: hsl(223, 19%, 93%);
+    background: $very-light-gray;
     padding: 5px;
     font-weight: 600;
     font-size: 1.8rem;
@@ -23,64 +10,88 @@ span {
     display: inline-block;
     margin-top: 10px;
     margin-right: 10px;
+    cursor: pointer;
   }
 
-.project {
-    width: 100%;
-    display: flex;
-    background-color: $white;
-    border-radius: 7px;
-    margin-bottom: 4rem;
-    height: max-content;
-    width: 100%;
-    display: grid;
-    column-gap: 2rem;
-    background-color: hsl(0deg, 0%, 100%);
-    border-radius: 7px;
-    margin-bottom: 4rem;
-    height: max-content;
-    grid-template-columns: auto auto auto;
-
-    .image {
-        width: 100%;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        height: 100%;
-
-        img {
-            width: inherit;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-    }
-
-    .description {
-        margin-left: 2rem;
-        padding-bottom: 2rem;
-
-        a {
-            display: inline-block;
-            margin-top: 2rem;
-            font-size: 3rem;
-            color: $dark-blue;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        
-        a:hover {
-            color: $moderate-blue;
-        }
-
-        p {
-            margin-bottom: 2rem;
-          }
-
-        button {
-            width: 120px;
-            margin-top: 3rem;
-        }
-
-    }
-    
+.intro {
+  margin-bottom: 6rem;
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    row-gap: 10rem;
+    column-gap: 10rem;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 100%;
+    min-height: 320px;
+    padding: 2rem 2rem;
+    background-color: #fff;
+    display: flex;
+    align-items: flex-end;
+    transition: .5s ease-in-out;
+    position: relative;
+    margin-right: 20px;
+    box-sizing: content-box;
+    border-radius: 7px;
+  }
+  
+  .card:hover {
+    transform: translateY(20px);
+  }
+  
+  .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: hsl(223, 19%, 93%);
+    box-shadow: 0px 3px 3px $moderate-blue;
+    z-index: 2;
+    transition: .5s all;
+    opacity: 0;
+  }
+  
+  .card:hover:before {
+    opacity: 1;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .info {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .5s all;
+  }
+  
+  .card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 135px;
+  }
