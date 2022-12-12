@@ -1,13 +1,16 @@
 <section>
     <h4>Professional and side projects.</h4>
-    <p class="intro">Hover or tap on a card to see the project details.</p>
+    <p class="intro">Hover or tap on a card to see the project details. You can click on a tag to filter the projects.</p>
 </section>
 
 <div class="wrapper">
     <div class="card" *ngFor="let project of projects">
-        <img *ngIf="project.imageSrc"
+        <img *ngIf="project.imageSrc; else svg"
             [src]="'../../../assets/images/'+project.imageSrc+'.png'" 
             alt="">
+        <ng-template #svg>
+            <img class="placeholder" src="https://images.pexels.com/photos/8833420/pexels-photo-8833420.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        </ng-template>
       <div class="info">
         <h4>{{ project.name }}</h4>
         <p> {{ project.description }}</p>
@@ -16,7 +19,11 @@
             <span *ngFor="let tag of project.tags"> {{ tag }} </span>
         </div>
         <a [routerLink]="" class="btn">Project Details</a>
-        <a [href]="" class="btn" style="margin-left: 10px;">Source code</a>
+        <a  *ngIf="project.sourceCode"
+            [href]="project.sourceCode" 
+            target="_blank"
+            class="btn" 
+            style="margin-left: 10px;">Source code</a>
       </div>
     </div>
   </div>

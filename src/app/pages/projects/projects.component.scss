@@ -19,13 +19,14 @@ span {
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 450px);
+    grid-template-columns: repeat(2, 490px);
     row-gap: 10rem;
     column-gap: 10rem;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
+    place-content: center;
   }
   
   .card {
@@ -94,4 +95,8 @@ span {
     align-items: center;
     margin-top: 1.5rem;
     width: 135px;
+  }
+
+  .placeholder {
+    filter: grayscale(90%);
   }
