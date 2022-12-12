@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-
+  skills = [
+    'Frontend development',
+    'Backend development',
+    'Angular',
+    'Firebase',
+    'Ionic',
+    'HTML', 
+    'CSS',
+    'JavaScript',
+    'Typescript',
+    'Node.js',
+    'SQL',
+    'MongoDB'
+  ];
 }
