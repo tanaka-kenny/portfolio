@@ -1,6 +1,6 @@
 <section>
     <h4>Professional and side projects.</h4>
-    <p class="intro">Hover or tap on a card to see the project details. You can click on a tag to filter the projects.</p>
+    <p class="intro">Hover or tap on a card to see the project details. </p>
 </section>
 
 <div class="wrapper">
@@ -15,10 +15,7 @@
         <h4>{{ project.name }}</h4>
         <p> {{ project.description }}</p>
         <p>Platform(s): <span *ngFor="let platform of project.platforms">{{platform}} </span></p>
-        <div class="tags">
-            <span *ngFor="let tag of project.tags"> {{ tag }} </span>
-        </div>
-        <a [routerLink]="" class="btn">Project Details</a>
+        <a [routerLink]="[project.id]" class="btn">Project Details</a>
         <a  *ngIf="project.sourceCode"
             [href]="project.sourceCode" 
             target="_blank"
