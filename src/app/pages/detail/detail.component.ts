@@ -10,6 +10,7 @@ import { Project } from '../projects/projects.component';
 })
 export class DetailComponent {
   project: Project;
+  imgSrc = ''
 
   constructor(private activeRoute: ActivatedRoute) {
     const id = this.activeRoute.snapshot.paramMap.get('projectId');

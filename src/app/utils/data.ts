@@ -5,14 +5,14 @@ export const TEAM: Team[] = [
     id: 'migal',
     name:'Migal',
     linkedIn: 'https://www.linkedin.com/in/migal-lewis-216244b2/',
-    imageSrc: 'https://media-exp1.licdn.com/dms/image/C5603AQFG6W7fdyIecA/profile-displayphoto-shrink_800_800/0/1593121569933?e=1676505600&v=beta&t=0MJSdZOaEqlzwB1Qdeqiufvz7jwZ7MvmOE_H4nOqLKc',
+    imageSrc: 'https://img.freepik.com/free-vector/hacker-operating-laptop-cartoon-icon-illustration-technology-icon-concept-isolated-flat-cartoon-style_138676-2387.jpg?w=740&t=st=1670951390~exp=1670951990~hmac=d42df4f5113785cc2b8aff0bbab2630fb4459f7d5690d452bb47ab4972a58453',
     position: 'Senior Software Developer',
   },
   {
     id: 'thierry',
     name: 'Thierry',
     linkedIn: 'https://www.linkedin.com/in/thierry-luhandjula-12823922/',
-    imageSrc: 'https://media-exp1.licdn.com/dms/image/D4D03AQF6Qw623PdnhQ/profile-displayphoto-shrink_800_800/0/1665039266142?e=1676505600&v=beta&t=rLsna5xnA9_AnEYjQ3t4HK4dDWA9xPoHyLow6I73B-8',
+    imageSrc: 'https://img.freepik.com/free-photo/3d-rendering-zoom-call-avatar_23-2149556785.jpg?w=740&t=st=1670951242~exp=1670951842~hmac=179152ebb01da16fb1dce27301f36b7636b94b1279b8544b5676c7ab749092c8',
     position: 'Chief Technology Officer',
   },
   {
@@ -40,13 +40,13 @@ export const TEAM: Team[] = [
     id: 'enver',
     name: 'Enver',
     linkedIn: 'https://www.linkedin.com/in/enver-samuel-4730b31ab/',
-    imageSrc: 'https://media-exp1.licdn.com/dms/image/C4D03AQGYNfmd6gnzVw/profile-displayphoto-shrink_800_800/0/1590503414708?e=1676505600&v=beta&t=uSfRn838wzn2c6uaH2KR4t2XrBDKO4JbmeFnfGFGvBE',
+    imageSrc: '../../assets/images/enver.png',
     position: 'Project Owner'
   },
   {
     id: 'liezel',
     name: 'Liezel',
-    imageSrc: '',
+    imageSrc: '../../assets/images/liezel.jpeg',
     linkedIn: 'https://www.linkedin.com/in/liezel-vermeulen-29540b9/',
     position: 'Social Media Manager'
   },
@@ -54,7 +54,7 @@ export const TEAM: Team[] = [
     id: 'mosima',
     name: 'Mosima',
     linkedIn: 'https://www.linkedin.com/in/mosima-selota-7a261624/',
-    imageSrc: 'https://media-exp1.licdn.com/dms/image/C4E03AQGxBgXdGK7Bng/profile-displayphoto-shrink_800_800/0/1521022336062?e=1676505600&v=beta&t=oRfJAWIzkCtxvf2FiGi3OfTxdaZxGLEelryisX1xags',
+    imageSrc: 'https://img.freepik.com/free-photo/3d-rendering-zoom-call-avatar_23-2149556785.jpg?w=740&t=st=1670951242~exp=1670951842~hmac=179152ebb01da16fb1dce27301f36b7636b94b1279b8544b5676c7ab749092c8',
     position: 'Owner'
   }
 ];
@@ -74,7 +74,8 @@ export const PROJECTS:Project[] = [
       tags: ['Frontend','Firebase', 'Ionic', 'Node.js', 'Backend', 'Neo4j', 'Personal'],
       platforms: ['Mobile'],
       sourceCode: 'https://github.com/tanaka-kenny/mentorMe',
-      endResult: 'Still in development.'
+      endResult: 'Still in development.',
+      team: getTeam(['migal'])
     },
     {
       id: 'assembly_management',
@@ -108,10 +109,11 @@ export const PROJECTS:Project[] = [
       name: 'Murder in Paris',
       description: 'A website for the multi-award winning documentary by South African director, Enver Samuel.',
       imageSrc: 'murder_in_paris_preview',
-      tags: ['Profession', 'Frontend', 'Angular','Firebase'],
+      tags: ['Professional', 'Frontend', 'Angular','Firebase'],
       liveUrl: 'https://murderinparis.com/',
       platforms: ['Web'],
-      team: getTeam(['enver', 'liezel', 'migal', 'banele'])
+      team: getTeam(['enver', 'liezel', 'migal', 'banele']),
+      endResult: 'Murder in Paris has gone on to screen in multiple countries as well as win multiple award. Also, Hawks Investigators said Murder in Paris the documentary was extremely helpful in thier investigations.'
     }
   ];
 
