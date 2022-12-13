@@ -26,12 +26,14 @@ export interface Project {
   liveUrl?: string;
   sourceCode?: string;
   platforms?: string[];
-  team: Team[];
+  team?: Team[];
 }
 
 export interface Team {
+  id: string;
   name: string;
   linkedIn: string;
   imageSrc: string;
   position: string;
+  role?: string;
 }
