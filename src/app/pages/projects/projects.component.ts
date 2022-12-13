@@ -26,4 +26,12 @@ export interface Project {
   liveUrl?: string;
   sourceCode?: string;
   platforms?: string[];
+  team: Team[];
+}
+
+export interface Team {
+  name: string;
+  linkedIn: string;
+  imageSrc: string;
+  position: string;
 }
