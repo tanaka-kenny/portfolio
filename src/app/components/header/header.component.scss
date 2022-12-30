@@ -45,3 +45,15 @@ nav {
         color: $white;
     }
 }
+
+@media (max-width: 400px) {
+    .name {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        .link-item {
+            font-size: 1.4rem;
+        }
+    }
+    }
