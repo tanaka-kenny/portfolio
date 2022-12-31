@@ -61,3 +61,13 @@ textarea {
 .btn {
     margin-top: 2rem;
 }
+
+@media (max-width: 400px) {
+    .details {
+        flex-direction: column;
+
+        .input-item:not(:first-child) {
+            margin-left: auto;
+        }
+    }
+}
