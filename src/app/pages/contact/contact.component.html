@@ -4,35 +4,47 @@
         <p>Eager to collaborate with me, or hire me?</p>
         <p>You can send me a message below, or contact me on <span>+27 67 130 1300</span></p>
     </div>
-    <form>
+    <form [formGroup]="formGroup">
         <div class="details">
             <div class="input-item">
-                <label for="">Name
+                <label for="name">
+                    Name
                     <span class="required">*</span>
                 </label>
-                <input type="text" class="details-input">
+                <input 
+                    formControlName="name"
+                    type="text" class="details-input">
             </div>
             <div class="input-item">
-                <label for="">Email
+                <label for="email">
+                    Email
                     <span class="required">*</span>
                 </label>
-                <input type="email" class="details-input">
+                <input
+                    formControlName="email" 
+                    type="email" class="details-input">
             </div>
         </div>
         <div class="input-item">
-            <label for="">Subject
+            <label>
+                Subject
                 <span class="required">*</span>
             </label>
-            <input type="text" class="subject-input">
+            <input 
+                formControlName="subject"
+                type="text" class="subject-input">
         </div>
         <div class="input-item">
             <label for="">Message
                 <span class="required">*</span>
             </label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea 
+                formControlName="message"
+                name="" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="btn">
-            <button>Send</button>
+            <button [disabled]="!formGroup.valid"
+                (click)="onSubmit()">Send</button>
         </div>
     </form>
 </section>
