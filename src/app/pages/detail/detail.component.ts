@@ -15,5 +15,7 @@ export class DetailComponent {
   constructor(private activeRoute: ActivatedRoute) {
     const id = this.activeRoute.snapshot.paramMap.get('projectId');
     this.project = PROJECTS.filter(project => project.id === id)[0];
+    console.log(this.project.team);
+    
   };
 }
