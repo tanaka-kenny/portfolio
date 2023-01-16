@@ -2,21 +2,22 @@
 
 .footer {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
-    width: 45ch;
+    width: max-content;
     margin-left: auto;
     margin-right: auto;
 }
 
 .icons {
     display: flex;
-    justify-content: space-between;
 
     a {
-        display: block;
+        display: inline-flex;
+        margin: 1rem;
     }
 }
+
 svg {
     margin-bottom: 0.5rem;
     width: 30px;
