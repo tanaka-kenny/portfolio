@@ -12,15 +12,18 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    data: { title: 'About'}
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    component: ProjectsComponent,
+    data: { title: 'Projects'}
   },
   {
     path: 'projects/:projectId',
-    component: DetailComponent
+    component: DetailComponent,
+    data: { title: 'Project'}
   }
 ];
 
