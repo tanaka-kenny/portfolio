@@ -9,6 +9,14 @@
     margin-right: auto;
 }
 
+.icons {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        display: block;
+    }
+}
 svg {
     margin-bottom: 0.5rem;
     width: 30px;
@@ -16,7 +24,25 @@ svg {
     display: inline-block;
 }
 
+.attribution {
+    text-align: center;
+}
+
 @media (max-width: 400px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .icons {
+        display: flex;
+        
+        a {
+            margin-right: 2.5rem;
+        }
+    }
+}
+
+@media (max-width: 991px) {
     .footer {
         flex-direction: column;
     }
