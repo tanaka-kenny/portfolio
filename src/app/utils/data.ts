@@ -90,7 +90,7 @@ export const PROJECTS:Project[] = [
       name: 'Horus Management System',
       description: 'A remote asset monitoring platform for cell towers that provides clients with visibility of their entire asset portfolio',
       tags: ['Professional', 'Frontend', 'Angular','Firebase', 'Ionic', 'Node.js', 'Backend'],
-      liveUrl: '',
+      liveUrl: 'https://www.youtube.com/watch?v=H47zatp2MuM',
       platforms: ['Web', 'Mobile'],
       team: getTeam(['migal', 'thierry', 'jamie'])
     },

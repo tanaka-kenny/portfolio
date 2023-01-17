@@ -21,6 +21,11 @@
             target="_blank"
             class="btn" 
             >Source code</a>
+            <a  *ngIf="project.liveUrl"
+            [href]="project.liveUrl" 
+            target="_blank"
+            class="btn" 
+            >View Demo</a>
       </div>
     </div>
   </div>
