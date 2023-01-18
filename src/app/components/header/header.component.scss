@@ -59,4 +59,11 @@ nav {
             font-size: 1.4rem;
         }
     }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
+}
