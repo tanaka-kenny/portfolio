@@ -8,83 +8,50 @@
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 490px);
+    grid-template-columns: repeat(3, 320px);
     row-gap: 10rem;
-    column-gap: 10rem;
+    column-gap: 5rem;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
     place-content: center;
   }
-  
-  .card {
-    width: 100%;
-    min-height: 320px;
-    padding: 2rem 2rem;
-    background-color: #fff;
-    display: flex;
-    align-items: flex-end;
-    transition: .5s ease-in-out;
-    position: relative;
-    margin-right: 20px;
-    box-sizing: content-box;
-    border-radius: 7px;
-  }
-  
-  .card:hover {
-    transform: translateY(20px);
-  }
-  
-  .card:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.card {
     display: block;
     width: 100%;
-    height: 100%;
-    background: hsl(223, 19%, 93%);
-    box-shadow: 0px 0px 1px $moderate-blue;
-    z-index: 2;
-    transition: .5s all;
-    opacity: 0;
-  }
-  
-  .card:hover:before {
-    opacity: 1;
-  }
-  
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .info {
-    position: relative;
-    z-index: 3;
-    color: #fff;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: .5s all;
-  }
-  
-  .card:hover .info {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 6px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    height: 300px;
 
-  .btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5rem;
-    width: 135px;
-    margin-right: 2rem;
+    h1 {
+      color: $dark-blue;
+      font-size: 22px;
+    }
+
+    .actions {
+      min-height: 38px;
+      padding: 0px 20px 16px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+
+      .link {
+        text-decoration: none;
+        color: rgb(106, 148, 64);
+
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
   }
 
   @media (max-width: 991px) {
@@ -94,9 +61,9 @@
       align-items: center;
     }
 
-    .card {
-      margin-right: 0;
-      min-height: unset;
-      height: 255px;
-    }
+    // .card {
+    //   margin-right: 0;
+    //   min-height: unset;
+    //   height: 255px;
+    // }
   }

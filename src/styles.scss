@@ -80,8 +80,15 @@ span {
   margin-right: 10px;
 }
 
+.icon {
+  margin-bottom: 0.5rem;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
 @media (max-width: 400px) {
-  html, body {
+  section {
     padding: 1rem;
   }
 
@@ -99,7 +106,7 @@ span {
 }
 
 @media (max-width: 991px) {
-  html, body {
+  section {
     padding: 2rem;
   }
 }

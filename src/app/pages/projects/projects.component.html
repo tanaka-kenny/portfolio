@@ -1,31 +1,41 @@
 <section>
     <h4>Professional and side projects.</h4>
-    <p class="intro">Hover or tap on a card to see the project details. </p>
+    <p class="intro">Tap on a card to see the project details. </p>
 </section>
 
 <div class="wrapper">
-    <div class="card" *ngFor="let project of projects">
-        <img *ngIf="project.imageSrc; else svg"
-            [src]="'../../../assets/images/'+project.imageSrc+'.png'" 
-            alt="image_missing">
-        <ng-template #svg>
-            <img class="placeholder" src="https://img.freepik.com/free-vector/organizing-projects-concept-illustration_114360-632.jpg?w=996&t=st=1670952090~exp=1670952690~hmac=6965e5d62011f8ba492d342673f4b7ca3e43dc0b038f3f9e32713d30c707ea69" alt="">
-        </ng-template>
-      <div class="info">
-        <h4>{{ project.name }}</h4>
-        <p> {{ project.description }}</p>
-        <p>Platform(s): <span *ngFor="let platform of project.platforms">{{platform}} </span></p>
-        <a [routerLink]="[project.id]" class="btn">Project Details</a>
-        <a  *ngIf="project.sourceCode"
+    <a href="" class="card" *ngFor="let project of projects">
+        <div class="title">
+          <h1>{{ project.name }}</h1>
+        </div>
+        <div class="description">
+            <p>{{ project.description}}</p>
+        </div>
+        <div class="actions" *ngIf="project.sourceCode || project.liveUrl">
+            <a  *ngIf="project.sourceCode"
             [href]="project.sourceCode" 
             target="_blank"
-            class="btn" 
-            >Source code</a>
+            class="link" 
+            >
+                <div>
+                    <img src="../../../assets/images/code.png" class="icon" alt="" style="margin-right: 1rem;">
+                    Source code
+                </div>
+            </a>
             <a  *ngIf="project.liveUrl"
-            [href]="project.liveUrl" 
-            target="_blank"
-            class="btn" 
-            >View Demo</a>
-      </div>
-    </div>
+                [href]="project.liveUrl" 
+                target="_blank"
+                class="link" 
+            >
+                <div>
+                    <img src="../../../assets/images/browser.png" class="icon" alt="" style="margin-right: 1rem;">
+                    View Demo
+                </div>
+            </a>
+        </div>
+        <div class="platforms">
+            <p>Platform(s): <span *ngFor="let platform of project.platforms">{{platform}} </span></p>
+        </div>
+
+      </a>
   </div>
