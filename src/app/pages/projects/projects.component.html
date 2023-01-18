@@ -11,7 +11,7 @@
         <div class="description">
             <p>{{ project.description}}</p>
         </div>
-        <div class="actions" *ngIf="project.sourceCode || project.liveUrl">
+        <div class="actions" *ngIf="project.sourceCode || project.liveUrl" style="margin-top: 35px;">
             <a  *ngIf="project.sourceCode"
             [href]="project.sourceCode" 
             target="_blank"
@@ -33,8 +33,8 @@
                 </div>
             </a>
         </div>
-        <div class="platforms">
-            <p>Platform(s): <span *ngFor="let platform of project.platforms">{{platform}} </span></p>
+        <div class="platforms" >
+            <p style="margin-top: 0;">Platform(s): <span *ngFor="let platform of project.platforms">{{platform}} </span></p>
         </div>
 
       </a>
