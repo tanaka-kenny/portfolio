@@ -4,7 +4,7 @@
 </section>
 
 <div class="wrapper">
-    <a href="" class="card" *ngFor="let project of projects">
+    <a [routerLink]="project.id" class="card" *ngFor="let project of projects">
         <div class="title">
           <h1>{{ project.name }}</h1>
         </div>
