@@ -1,34 +1,26 @@
 <section>
-    <h4>Side projects.</h4>
-    <p class="intro">Tap on a card to see the project details. </p>
-</section>
-
-<div class="wrapper">
-    <a [routerLink]="project.id" class="card" *ngFor="let project of projects">
-        <div class="title">
-            <h1>{{ project.name }}</h1>
-        </div>
-        <div class="description">
-            <p>{{ project.description}}</p>
-        </div>
-        <div class="actions" *ngIf="project.sourceCode || project.liveUrl" style="margin-top: 35px;">
-            <a *ngIf="project.sourceCode" [href]="project.sourceCode" target="_blank" class="link">
-                <div>
-                    <img src="../../../assets/images/code.png" class="icon" alt="" style="margin-right: 1rem;">
-                    Source code
-                </div>
-            </a>
-            <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" class="link">
-                <div>
-                    <img src="../../../assets/images/browser.png" class="icon" alt="" style="margin-right: 1rem;">
-                    View Demo
-                </div>
-            </a>
-        </div>
-        <div class="platforms">
-            <p style="margin-top: 0;">Platform(s): <span *ngFor="let platform of project.platforms">{{platform}} </span>
-            </p>
-        </div>
-
+  <h4>Projects</h4>
+  <div class="wrapper">
+    <a class="card" *ngFor="let project of projects">
+      <div class="title">
+        <h1>{{ project.name }}</h1>
+      </div>
+      <div class="platforms">
+        <p style="margin-top: 0">
+          Platform(s):
+          <span *ngFor="let platform of project.platforms"
+            >{{ platform }}
+          </span>
+        </p>
+      </div>
+      <div class="description">
+        <p>{{ project.description }}</p>
+      </div>
+      <div class="platforms">
+        <p style="margin-top: 0">
+          Tags: <span *ngFor="let tag of project.tags">{{ tag }} </span>
+        </p>
+      </div>
     </a>
-</div>
+  </div>
+</section>

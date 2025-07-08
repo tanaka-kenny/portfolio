@@ -7,17 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   skills = [
-    'Frontend development',
-    'Backend development',
+    'Typescript',
+    'Java',
     'Angular',
+    'Spring Boot',
     'Firebase',
     'Ionic',
     'HTML', 
     'CSS',
-    'JavaScript',
-    'Typescript',
-    'Node.js',
     'SQL',
-    'MongoDB'
+    'NoSQL',
+    'Git',
+    'CI/CD Pipelines'
   ];
 }

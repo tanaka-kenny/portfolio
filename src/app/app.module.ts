@@ -7,8 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { DetailComponent } from './pages/detail/detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CvComponent } from './pages/cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ProjectsComponent,
     FooterComponent,
-    DetailComponent
-  ],
+    CvComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

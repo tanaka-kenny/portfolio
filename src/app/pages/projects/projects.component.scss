@@ -7,15 +7,9 @@
 }
 
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 320px);
-    row-gap: 5rem;
-    column-gap: 5rem;
-    width: 80%;
+
     margin-right: auto;
     margin-left: auto;
-    justify-content: center;
-    place-content: center;
   }
 
 .card {
@@ -26,8 +20,11 @@
     padding-right: 1rem;
     padding-left: 1rem;
     text-decoration: none;
-    height: 300px;
+    margin-bottom: 1.5rem;
 
+    &:hover {
+      border: solid 1px $dark-blue;
+    }
     h1 {
       color: $dark-blue;
       font-size: 22px;

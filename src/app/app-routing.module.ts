@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
-import { DetailComponent } from './pages/detail/detail.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { CvComponent } from './pages/cv/cv.component';
 
 const routes: Routes = [
   {
@@ -13,17 +13,22 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
-    data: { title: 'About'}
+    data: { title: 'About' }
   },
   {
     path: 'projects',
     component: ProjectsComponent,
-    data: { title: 'Projects'}
+    data: { title: 'Projects' }
   },
   {
-    path: 'projects/:projectId',
-    component: DetailComponent,
-    data: { title: 'Project'}
+    path: 'cv',
+    component: CvComponent,
+    data: { title: 'CV' }
+  },
+  {
+    path: '**',
+    redirectTo: 'about',
+    pathMatch: 'full'
   }
 ];
 
